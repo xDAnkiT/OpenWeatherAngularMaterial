@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="container" fxLayout="column">
+  <app-search-city (searchQueryEvent)="searchForcast($event)"></app-search-city>
+
+  <div class="atricle-container">
+    <app-weatcher-forcast [forcastResponse]="forcastResponse" [forcastCity]="forcastCity"></app-weatcher-forcast>
+  </div>
+</div>

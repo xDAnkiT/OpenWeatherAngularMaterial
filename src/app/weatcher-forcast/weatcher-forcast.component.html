@@ -1,0 +1,43 @@
+<div fxLayout="column" fxLayoutGap="16px">
+  <div fxLayoutAlign="center center" *ngFor="let item of firstArray">
+    <mat-card fxFlex="40%" class="weather-item" >
+      <div>
+        <mat-chip-list>
+          <mat-chip>{{forcastCity}}</mat-chip>
+        </mat-chip-list>
+      </div>
+      <div>
+        <span class="weather-item-temperature" fxLayoutAlign="center center">{{(item.main.temp -273.15).toFixed(2)}} °</span>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="weather-item-primary-properties">
+        <div class="weather-item-primary-properties-inner" fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="center center">
+          <div fxFlex="30%">
+            <span fxLayoutAlign="start" class="weather-item-primary-properties-span dark-span-xs">Pressure: {{item.main.pressure}} </span>
+          </div>
+          <div fxFlex="30%">
+            <span fxLayoutAlign="center" class="weather-item-primary-properties-span dark-span-xs">Humidity:  {{item.main.humidity}} hPa </span>
+          </div>
+          <div fxFlex="30%">
+            <span fxLayoutAlign="end" class="weather-item-primary-properties-span dark-span-xs">Sea Level:  {{item.main.sea_level}} hPa</span>
+          </div>
+        </div>
+        <div class="weather-item-primary-properties-inner" fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="center center">
+          <div fxFlex="30%">
+            <span fxLayoutAlign="left" class="weather-item-primary-properties-span dark-span-xs">Cloud: {{item.clouds.all}} % </span>
+          </div>
+          <div fxFlex="30%">
+            <span fxLayoutAlign="center" class="weather-item-primary-properties-span dark-span-xs">Wind: {{item.wind.speed}} m/s </span>
+          </div>
+          <div fxFlex="30%">
+            <span fxLayoutAlign="end" class="weather-item-primary-properties-span dark-span-xs">Rain in 3 hrs: No </span>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <span class="weather-item-timestamp" fxLayoutAlign="center center">
+          <mat-icon class="material-icons">watch_later </mat-icon>&nbsp; {{formatDateToAccurate(item.dt)}}</span>
+      </div>
+    </mat-card>
+  </div>
+  <app-weatcher-forcast-list [forcastItemArrayResponse]="forcastItemArray"  (forecastItemElement)="forcastItemClick($event)"></app-weatcher-forcast-list>
+</div>

@@ -1,0 +1,10 @@
+<mat-grid-list cols="10" rowHeight="2:2">
+
+  <mat-grid-tile *ngFor="let item of forcastItemArrayResponse">
+    <mat-card  (click)="onItemClick(item)" matTooltip="{{formatDateToAccurate(item.dt)}}">
+      <p class="item-temperature">{{(item.main.temp -273.15).toFixed(2)}} °</p>
+      <p class="item-timestamp">{{formatDateToRelative(item.dt)}}</p>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>

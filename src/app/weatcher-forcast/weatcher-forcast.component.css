@@ -1,0 +1,29 @@
+.weather-item {
+  background-color: black;
+}
+.weather-item-temperature {
+  color: white;
+  font-weight: bold;
+  font-size: 5em;
+}
+.mat-divider {
+  border-top-color: rgba(255, 255, 255, 0.18);
+}
+.weather-item-primary-properties {
+  margin-top: 16px;
+}
+.weather-item-timestamp {
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+}
+.weather-item-primary-properties-inner{
+    padding-bottom: 16px;
+}
+
+.dark-span-xs {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}

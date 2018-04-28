@@ -1,0 +1,17 @@
+mat-grid-tile {
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+  -moz-transition: opacity 0.15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+}
+mat-grid-tile:hover {
+  opacity: 0.6;
+}
+.item-temperature {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.item-timestamp {
+  font-size: 12px;
+}

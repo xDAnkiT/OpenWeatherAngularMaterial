@@ -1,0 +1,12 @@
+<mat-card>
+  <div class="search-form" fxLayout="row" fxLayoutGap="25px">
+    <div  fxFlex="90%">
+      <mat-form-field class="search-full-width">
+        <input matInput placeholder="Type city name to know Weather forcast!" [(ngModel)]="searchCity" aria-label="State">
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="accent" (click)="onCitySearch()">SEARCH FORCAST</button>
+    </div>
+  </div>
+</mat-card>
