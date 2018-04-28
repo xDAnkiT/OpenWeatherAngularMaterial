@@ -1,7 +1,5 @@
 # BuildItApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
-
 ## Installing dependencies
 
 Run `npm install` to install packages locally. once done move on to the next step.
